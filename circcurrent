@@ -1,0 +1,36 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+
+int main(int argc, char **argv) {
+
+ 
+  
+  double R1, R2, R3, V, Is, Ip, Rp, Rs;
+  
+
+	printf("Enter the values of R1, R2 and R3 (in Ohm): \n");
+	
+    scanf("%lf %lf %lf\n", &R1, &R2, &R3);
+
+	printf("Enter the Voltage: \n");
+	
+	scanf("%lf\n", &V);
+	
+ Rs = R1 + R2 + R3;
+ 
+ Is = V/Rs;
+ 
+ printf("Current through the resistors in series: %0.2f A \n", Is);
+	
+ Rp = (R1*R2*R3)/((R2*R3)+(R1*R3)+(R1*R2));
+ 
+ Ip = V/Rp;
+ 
+ printf("Current through the resistors in parllel: %0.2f A \n", Ip);
+ 
+ return 0;
+ 
+}
+ 
+ 
